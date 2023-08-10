@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Graph CDN Link -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <div class="main-header">
+      <div class="logo">
+        <img src="./Content/Logo.png" alt="" />
+      </div>
+      <ul>
+        <li>
+          <a href="#" class="active"> Dashboard</a>
+        </li>
+        <li>
+          <a href="#">Insights</a>
+        </li>
+        <li>
+          <a href="#">Messages</a>
+        </li>
+        <li>
+          <a href="#">Scheduled</a>
+        </li>
+        <li>
+          <a href="#">Integrations</a>
+        </li>
+      </ul>
+      <div class="icons">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-solid fa-gear"></i></a>
+        <a href="#"><i class="fa-solid fa-bell"></i></a>
+        <p>Online</p>
+        <div class="image">
+          <img src="./Content/download.png" />
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="card-row">
+        <div class="card">
+          <div class="header">
+            <div class="text">
+              <h3>Total Orders</h3>
+              <h1 style="margin-top: -20px; font-size: 40px">40,768</h1>
+              <div class="indicator">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        </div>
+        <div class="card">
+          <div class="header">
+            <div class="text">
+              <h3>Total Sales</h3>
+              <h1 style="margin-top: -20px; font-size: 40px">75,068</h1>
+              <div class="indicator">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-plus cart1"></i></a>
+        </div>
+      </div>
+      <div class="card-row">
+        <div class="card">
+          <div class="header">
+            <div class="text">
+              <h3>Total Profit</h3>
+              <h1 style="margin-top: -20px; font-size: 40px">30,768</h1>
+              <div class="indicator">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+          </div>
+          <a href="#"><i class="fa-solid fa-chart-line cart2"></i></a>
+        </div>
+        <div class="card">
+          <div class="header">
+            <div class="text">
+              <h3>Total Return</h3>
+              <h1 style="margin-top: -20px; font-size: 40px">5,068</h1>
+              <div class="indicator">
+                <i class="fa-solid fa-arrow-up"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+          </div>
+          <a href="#"><i class="fa-solid fa-cart-arrow-down cart3"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graph -->
+    <div class="graph-card">
+      <h2>This week progress</h2>
+      <div class="bar-graph">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    </div>
+
+    <!-- Recent table -->
+    <h2 style="margin-left: 20px">User Activity</h2>
+    <table id="Users">
+      <tr>
+        <th>User</th>
+        <th>Delivery</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Jill</td>
+        <td>Pending</td>
+        <td>Active</td>
+      </tr>
+      <tr>
+        <td>Alex</td>
+        <td>Process</td>
+        <td>Active</td>
+      </tr>
+      <tr>
+        <td>Jasmine</td>
+        <td>Delivered</td>
+        <td>Inactive</td>
+      </tr>
+      <tr>
+        <td>Julien</td>
+        <td>Pending</td>
+        <td>Active</td>
+      </tr>
+    </table>
+
+    <!-- Sales & Product -->
+    <div class="flex-container">
+      <div class="sales-column">
+        <div class="title">
+          Sales Overview
+          <button class="see-all">
+            See All <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <hr />
+        <div class="text">
+          <ul>
+            <li>Country</li>
+            <li class="margin">
+              <img src="./Content/Flag-Brazil.webp" alt="" />
+              Brazil
+            </li>
+            <li class="margin">
+              <img src="./Content/Flag-China.webp" alt="" /> China
+            </li>
+            <li class="margin">
+              <img src="./Content/Flag-Belgium.webp" alt="" /> Belgium
+            </li>
+            <li class="margin">
+              <img src="./Content/Flag-France.webp" alt="" /> France
+            </li>
+          </ul>
+          <ul>
+            <li>Total Sales</li>
+            <li class="margin">4234</li>
+            <li class="margin2">3214</li>
+            <li class="margin2">2843</li>
+            <li class="margin2">1942</li>
+          </ul>
+          <ul>
+            <li>Change</li>
+            <li class="margin" style="color: green; text-align: right">+35%</li>
+            <li class="margin2" style="color: red; text-align: right">-25%</li>
+            <li class="margin2" style="color: green; text-align: right">
+              +28%
+            </li>
+            <li class="margin2" style="color: green; text-align: right">
+              +15%
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div class="product-column">
+        <div class="title">
+          Product Overview
+          <button class="see-all">
+            See All <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+        <hr />
+        <div class="text">
+          <ul>
+            <li>
+              Currently Waiting <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Last Updated: 12m ago
+              </p>
+            </li>
+            <li>
+              Successfully Completed <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Last Updated: 12m ago
+              </p>
+            </li>
+            <li>
+              Delayed <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Last Updated: 6m ago
+              </p>
+            </li>
+            <li>
+              Successfully Completed <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Last Updated: 12m ago
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Shipments <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Orders
+              </p>
+            </li>
+            <li>
+              Shipments <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Orders
+              </p>
+            </li>
+            <li>
+              Shipments <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Orders
+              </p>
+            </li>
+            <li>
+              Shipments <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);
+                "
+              >
+                Orders
+              </p>
+            </li>
+          </ul>
+          <ul class="rightText">
+            <li class="rightText">
+              2,533 <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);                  
+                "
+              >
+                584
+              </p>
+            </li>
+            <li class="rightText">
+              312 <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);                  
+                "
+              >
+                409
+              </p>
+            </li>
+            <li class="rightText">
+              122 <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);                  
+                "
+              >
+                341
+              </p>
+            </li>
+            <li class="rightText">
+              221 <br />
+              <p
+                style="
+                  font-size: 15px;
+                  margin-top: 4px;
+                  color: rgb(169, 168, 168);                  
+                "
+              >
+                332
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        Created By: Hameez Ur Rehman        
+      </p>
+      <p>&copy; All Rights Are Reserved</p>
+    </div>
+
+    <!-- Graph script -->
+    <script>
+      var xValues = ["Orders", "Sales", "Profit", "Return"];
+      var yValues = [80, 120, 60, 20, 0];
+      var barColors = ["#66b0ff", "#2bd47d", "#ffc233", "#e05260"];
+
+      new Chart("myChart", {
+        type: "line",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              fill: false,
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+          title: {
+            display: true,
+            text: "Progress Chart",
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
